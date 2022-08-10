@@ -247,6 +247,14 @@ void* convert_yuv(void* handler){
         }
         yuv=(YUV*)calloc(1,sizeof(YUV));
 
+
+
+//  if(!mat){
+//         printf("the malloc unSucssed!!\n");
+//         exit(1);
+//     }
+
+
         printf("------------------------------------------CONVERT_YUV-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-----------------\n");
 //        rgb_mat = (rgb_t *)malloc(ROW * COLUMN * sizeof(rgb_t));
 //        rgb_mat=*((rgb_t**)(dequeue((&hand)->stg_rgb_convertor->dest_queue)->data));

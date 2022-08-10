@@ -13,11 +13,13 @@ typedef struct queue{
     int counter;
     sem_t sema;
 }Queue,*p_queue;
+
 int enqueue(Queue*,Node*);
 Node* dequeue(Queue*);
 Node* createNode(void*);
-Queue*createQueue(int);
+Queue* createQueue(int);
 void freeNode(Node*);
 void freeQueue(Queue*);
-int isEmpty(Queue* queue);
+int isEmpty(Queue*);
+Node* top(Queue*);
 #endif // QUEUE_H
