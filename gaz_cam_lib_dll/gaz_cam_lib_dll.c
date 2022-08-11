@@ -141,7 +141,7 @@ int GAS_API_DO_SNAPSHOT(p_handler handler,snapshot_t snapshot)
 }
 
 void saveFrame_ppm(rgb_t * mat_rgb){
-    FILE * outfile = fopen("/home/chana/PROJECTS/Image/yeshua17.bmp","wb+");
+    FILE * outfile = fopen("/home/chana/PROJECTS/Image/p1.bmp","wb+");
     ppm_image * img = (ppm_image *)calloc(1,sizeof (ppm_image));
     img->width = ROW;
     img->height = COLUMN;
@@ -166,7 +166,7 @@ void saveFrame_jpg(uint8_t *pRGBBuffer, int iFrame)
     jpeg_create_compress(&cinfo);
     //sprintf(PATHSAVESNAPSHOT, "test%d.jpg", iFrame);
     sprintf(szFilename, "test%d.jpg", iFrame);//Picture name is video name + number
-    fp = fopen("/home/chana/PROJECTS/Image/yeshua19.jpg", "wb");
+    fp = fopen("/home/chana/PROJECTS/Image/p1.jpg", "wb");
     if(fp == NULL)
         return;
 
@@ -427,7 +427,7 @@ void* decoder(void* handler){
     p_encoder=init_encoder(COLUMN,ROW,12);
     frame=p_encoder->frame;
 
-    outline=fopen("/home/chana/PROJECTS/Videoes/michal.ts","wb");
+    outline=fopen("/home/chana/PROJECTS/Videoes/video1.ts","wb");
     assert(outline);
 
     while((&hand)->status&RECORD_ACTIVE || isEmpty((&hand)->stg_yuv_convertor->dest_queue) == 0)
